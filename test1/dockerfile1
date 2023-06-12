@@ -1,0 +1,4 @@
+FROM debian:11
+RUN apt-get upgrade && apt-get update -y
+RUN apt-get install -y python3 default-mysql-client
+CMD bash
