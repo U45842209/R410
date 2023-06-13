@@ -1,0 +1,8 @@
+FROM debian:11
+RUN apt update -y
+RUN apt-get install -y python3-pip
+RUN pip3 install fastapi uvicorn
+WORKDIR /srv
+COPY app1.py app1.py
+CMD uvicorn app1:app −−host 0.0.0.0
+
